@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+.gallery-item {
+    border: 2px solid #ddd;
+    padding: 5px;
+    background-color: white;
+    max-width: 200px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item p {
+    text-align: center;
+    font-size: 14px;
+}
