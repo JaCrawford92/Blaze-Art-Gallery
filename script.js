@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectId}`);
                 const artworkData = await artworkResponse.json();
 
+                // Ensure there's a valid image to display
+                if (!artworkData.primaryImageSmall || artworkData.primaryImageSmall.trim() === "") {
+                    continue; // Skip if there's no valid image
+                }
+
                 // Create gallery item
                 const galleryItem = document.createElement('div');
                 galleryItem.className = 'gallery-item';
